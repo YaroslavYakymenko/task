@@ -1,10 +1,8 @@
 package service;
 
 import employee.Employee;
-import employee.OrdinaryEmployee;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class EmployeePrintServiceImpl implements EmployeePrintService {

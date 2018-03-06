@@ -44,13 +44,17 @@ public class Main {
         //Step 3. Write a method that prints the names of all subordinates for a given employee.
         System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
         System.out.println("Prints the names of all subordinates for a given employee");
-        lowerFinanceManager.setManager(financeManager);
         System.out.println("----------------------------------------------------");
         employeePrintService.printSubordinates(financeManager);
 
         System.out.println("----------------------------------------------------");
         System.out.println("CEO's subordinates");
         employeePrintService.printSubordinates(ceo);
+
+        System.out.println("Prints the names of all subordinates for a given employee");
+        System.out.println("----------------------------------------------------");
+        lowerFinanceManager.setManager(financeManager);
+        employeePrintService.printSubordinates(financeManager);
 
         //Step 4. Write a method to print the CEO's name for a given employee.
         System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><><><>");

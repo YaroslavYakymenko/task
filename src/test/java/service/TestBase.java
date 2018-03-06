@@ -1,7 +1,7 @@
 package service;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -9,12 +9,12 @@ import java.io.PrintStream;
 public abstract class TestBase {
     final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    @Before
+    @BeforeEach
     public void setUpStream() {
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
+    @AfterEach
     public void restoreStream() {
         System.setOut(System.out);
     }

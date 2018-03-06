@@ -28,6 +28,7 @@ public abstract class Employee {
     public void setManager(Employee employee) {
         removeManager();
         this.manager = employee;
+        if (this.manager == null) return;
         List<Employee> subordinates = this.manager.getSubordinates();
         if (!subordinates.contains(this)) {
             this.manager.getSubordinates().add(this);
